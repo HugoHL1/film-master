@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, View, TextInput, StyleSheet, Image} from "react-native";
+import {Button, View, TextInput, StyleSheet, Image, TouchableOpacity, Text} from "react-native";
 
 export const Search = (props) => {
     const [isDisabled, setIsDisabled] = useState(true);
@@ -18,7 +18,15 @@ export const Search = (props) => {
                     onChangeText={onChangeText}
                 />
             </View>
-            <Button disabled={isDisabled} title='Rechercher' onPress={() => props.handleClickButton()}/>
+            <View style={styles.button_search}>
+                <TouchableOpacity
+                    style={styles.button_style_search}
+                    disabled={isDisabled}
+                    onPress={() => props.handleClickButton()}
+                >
+                    <Text style={styles.button_style_search_text} >RECHERCHER</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -27,13 +35,12 @@ const styles = StyleSheet.create({
     main_container: {
         padding: 30,
         backgroundColor: '#b00020',
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15
+        borderRadius: 15
     },
     input_container: {
         flexDirection: 'row',
         backgroundColor: '#fff',
-        borderRadius: 15,
+        borderRadius: 5,
         paddingLeft: 10,
         alignItems: 'center',
         marginBottom: 10
@@ -44,6 +51,22 @@ const styles = StyleSheet.create({
     },
     textinput: {
         height: 50,
-        paddingLeft: 10
+        paddingLeft: 10,
+        fontWeight: 'bold'
+    },
+    button_search: {
+        alignItems: 'flex-end'
+    },
+    button_style_search: {
+        marginTop: 10,
+        backgroundColor: '#B5A90F',
+        borderRadius: 5
+    },
+    button_style_search_text: {
+        padding: 10,
+        paddingRight: 15,
+        paddingLeft: 15,
+        color: '#FFFFFF',
+        fontWeight: 'bold'
     }
 })
