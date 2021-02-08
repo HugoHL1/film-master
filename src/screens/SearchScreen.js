@@ -60,7 +60,7 @@ export default class SearchScreen extends React.Component {
             </View>
         }
 
-        return <View style={styles.no_found_container}><Text style={styles.text_no_result}>Aucun film n'a été chargé.</Text></View>
+        return <View style={styles.no_found_container}><Text style={styles.text_no_result}>Aucune recherche effectuée</Text></View>
     }
 
     render() {
@@ -97,10 +97,17 @@ const styles = StyleSheet.create({
     },
     no_found_container: {
         flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     loading_container: {
-    bottom: 300
+        bottom: 300
+    },
+    text_no_result: {
+        width: 250,
+        color: '#b5a90f',
+        fontSize: 24,
+        textAlign: 'center',
+
     }
 })

@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     main_container_section: {
         height: 100,
         backgroundColor: '#B00020',
-        borderRadius: 25,
+        borderBottomLeftRadius: 25,
+        borderBottomRightRadius: 25,
         flexDirection: 'row',
     },
 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     title_text_section:{
         color:'#B5A90F',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 24,
     },
 
     arrow_section:{
@@ -46,8 +47,9 @@ const styles = StyleSheet.create({
     },
 
     arrow_logo:{
-        height: 25,
-        width: 25,
+        marginLeft: 10,
+        height: 40,
+        width: 40,
 
     },
 })
