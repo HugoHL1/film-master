@@ -1,9 +1,13 @@
+
 import React from 'react';
-import Search from './src/components/Search';
-import Section from './src/components/Section';
+import SearchScreen from "./src/screens/SearchScreen";
+import {View} from "react-native";
 
 export default function App() {
   return (
-      <Section />
+      <View style={{flex: 1, marginTop: 30}}>
+        <SearchScreen />
+      </View>
+
   );
 }
