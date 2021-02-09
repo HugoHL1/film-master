@@ -1,4 +1,3 @@
-
 import { API_KEY, API_URL } from "../constants/api";
 
 function getQueryString(queryParams) {

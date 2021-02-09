@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, Image } from 'react-native'
 class FilmCard extends React.Component {
   render() {
     return (
-      <View style={styles.main_container}>  
+      <View style={styles.main_container}>
         <Image
           style={styles.image_film_card}
           source={require('../../assets/images/starwars.jpg')}
