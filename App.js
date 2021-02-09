@@ -5,11 +5,13 @@ import {View, Image, StyleSheet} from "react-native";
 import Section from "./src/components/Section";
 import Category from "./src/components/Category";
 import FilmCard from "./src/components/FilmCard";
+import BottomBar from "./src/components/BottomBar";
 
 export default function App() {
   return (
       <View style = {styles.background}>
         <SearchScreen />
+        <BottomBar />
       </View>
 
   );
