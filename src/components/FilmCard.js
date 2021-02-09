@@ -1,18 +1,14 @@
-// Components/FilmItem.js
-
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 
-class FilmCards extends React.Component {
+class FilmCard extends React.Component {
   render() {
     return (
-      <View style={styles.main_container}>
-          
+      <View style={styles.main_container}>  
         <Image
           style={styles.image}
           source={require('../../assets/images/starwars.jpg')}
         />
-        
         <View style={styles.content_container}>
           <View style={styles.header_container}>
             <Text style={styles.title_text}>Nom du film</Text>
@@ -35,9 +31,9 @@ class FilmCards extends React.Component {
 const styles = StyleSheet.create({
 
   main_container: {
-    marginTop: 90,
+    marginTop: 15,
     marginHorizontal: 10,
-    flex: 0.2, // A changer possiblement si problèmes de taille
+    height: 150,
     flexDirection: 'row',
     backgroundColor: '#ffffff',
     shadowOffset:{  width: 0,  height: 4,  },
@@ -96,4 +92,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default FilmCards
+export default FilmCard

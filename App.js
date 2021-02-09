@@ -4,12 +4,12 @@ import SearchScreen from "./src/screens/SearchScreen";
 import {View, Image, StyleSheet} from "react-native";
 import Section from "./src/components/Section";
 import Category from "./src/components/Category";
-import FilmCards from "./src/components/FilmCards";
+import FilmCard from "./src/components/FilmCard";
 
 export default function App() {
   return (
       <View style = {styles.background}>
-        <FilmCards/>
+        <FilmCard/>
       </View>
 
   );
