@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View, StyleSheet, Text, FlatList, ActivityIndicator} from "react-native";
+import {SafeAreaView, View, StyleSheet, Text, FlatList, ActivityIndicator, Image} from "react-native";
 import {Search} from "../components/Search";
 import {ResultSearch} from "../components/ResultSearch";
 import {FilmItem} from "../components/FilmItem";
@@ -19,6 +19,8 @@ export default class SearchScreen extends React.Component {
         this.page = 0;
         this.totalPages = 0;
     }
+
+
 
     _searchFilms = () => {
         //Permet de réinitialiser le state entre deux recherches différentes
@@ -60,23 +62,36 @@ export default class SearchScreen extends React.Component {
             </View>
         }
 
-        return <View style={styles.no_found_container}><Text style={styles.text_no_result}>Aucune recherche effectuée</Text></View>
+        return <View style={styles.no_found_container}>
+                    <Image
+                        style={styles.status_logo}
+                        source={require('../../assets/images/bad.png')}
+                    />
+                    <Text
+                        style={styles.text_no_result}>Aucune recherche effectuée
+                    </Text>
+                </View>
     }
 
     render() {
         const {searchText} = this.state;
         return (
             <SafeAreaView style={styles.main_container}>
+                <View style={styles.logo_container}>
+                    <Image
+                        style={styles.image_logo}
+                        source={require('../../assets/images/logo.png')}
+                    />
+                </View>
                 <Search handleSearch={this.handleSearchText} handleClickButton={this._searchFilms}/>
-                {this.state.searchText !== '' ? <ResultSearch textSearched={searchText}/> : null}
+                    {this.state.searchText !== '' ? <ResultSearch textSearched={searchText}/> : null}
                     {this._renderResult()}
-                { this.state.isLoading ?
-                    <View style={styles.loading_container}>
-                        <ActivityIndicator size='large' color={'#000'} />
-                    </View>
-                    : null
+                    {this.state.isLoading ?
+                <View style={styles.loading_container}>
+                    <ActivityIndicator size='large' color={'#000'} />
+                </View>
+                : null
                 }
-
             </SafeAreaView>
         )
     }
@@ -108,6 +123,19 @@ const styles = StyleSheet.create({
         color: '#b5a90f',
         fontSize: 24,
         textAlign: 'center',
-
+        fontWeight: 'bold',
+    },
+    logo_container: {
+        alignItems:'center',
+    },
+    image_logo: {
+        width: 200,
+        height: 200,
+        marginVertical: 15,
+    },
+    status_logo: {
+        width: 125,
+        height: 125,
+        marginBottom: 20,
     }
 })
