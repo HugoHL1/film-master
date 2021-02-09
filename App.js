@@ -9,7 +9,7 @@ import FilmCard from "./src/components/FilmCard";
 export default function App() {
   return (
       <View style = {styles.background}>
-        <FilmCard/>
+        <SearchScreen />
       </View>
 
   );
