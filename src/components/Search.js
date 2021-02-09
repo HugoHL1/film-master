@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     textinput: {
         height: 50,
         paddingLeft: 10,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#b00020'
     },
     button_search: {
         alignItems: 'flex-end'
