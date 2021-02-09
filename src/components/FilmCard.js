@@ -6,7 +6,7 @@ class FilmCard extends React.Component {
     return (
       <View style={styles.main_container}>  
         <Image
-          style={styles.image}
+          style={styles.image_film_card}
           source={require('../../assets/images/starwars.jpg')}
         />
         <View style={styles.content_container}>
@@ -41,9 +41,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.7,
   },
 
-  image: {
-    flex: 2,
-    resizeMode: 'contain',
+  image_film_card: {
+    justifyContent: 'flex-start',
+    width: 110,
+    height: 150
   },
 
   content_container: {
