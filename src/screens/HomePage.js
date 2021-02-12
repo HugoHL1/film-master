@@ -13,19 +13,23 @@ export default function HomePage() {
                     source={require('../../assets/images/logo.png')}
                 />
             </View >
-            <View style = {styles.button_container}>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
-                <Category/>
+            <View style = {styles.button_container_global}>
+            <View style = {styles.button_container1}>
+                <Category text= "Action"/>
+                <Category text= "Animation"/>
+                <Category text= "Crime"/>
+                <Category text= "Drame"/>
+                <Category text= "Fantastique"/>
+                <Category text= "Horreur"/>
+            </View>
+            <View style = {styles.button_container2}>
+                <Category text= "Aventure"/>
+                <Category text= "Comédie"/>
+                <Category text= "Documentaire"/>
+                <Category text= "Familial"/>
+                <Category text= "Histoire"/>
+                <Category text= "Musique"/>
+            </View>
             </View>
         </View>
   
@@ -36,8 +40,6 @@ const styles = StyleSheet.create({
 
     homepage: {
         flex:1,
-        marginBottom: 200
-
     },
 
     status_logo: {
@@ -49,12 +51,22 @@ const styles = StyleSheet.create({
         flex:0.4,
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
 
-    button_container: {
+    button_container_global: {
         flex:1,
-        flexWrap: 'wrap',
-        alignContent: 'space-around',
+        flexDirection: 'row',
+        marginHorizontal: 13,
+    },
 
+    button_container1: {
+        flex:1,
+
+    },
+
+    button_container2: {
+        flex:1,
+        alignItems: 'flex-end'
     }
 })
