@@ -5,7 +5,7 @@ import {ResultSearch} from "../components/ResultSearch";
 import {FilmItem} from "../components/FilmItem";
 import {searchMovie} from "../services/movie";
 
-export default class SearchScreen extends React.Component {
+export default class HomePage extends React.Component {
     state = {
         searchText: '',
         filmsState: [],

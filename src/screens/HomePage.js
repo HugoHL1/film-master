@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     status_logo: {
         width: 125,
         height: 125,
-        borderRadius: '70%',
+        borderRadius: 125,
         borderColor: '#b00020',
         borderWidth: 8,
     },
