@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function Category({ text, OnPress }) {
       return(
@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
             shadowOpacity: 0.7,
             justifyContent: 'center',
             alignItems: 'center',
+            marginBottom: 10,
+            marginLeft: 10,
       },
       button_text_category: {
             color: '#B00020',

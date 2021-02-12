@@ -6,11 +6,12 @@ import Section from "./src/components/Section";
 import Category from "./src/components/Category";
 import FilmCard from "./src/components/FilmCard";
 import BottomBar from "./src/components/BottomBar";
+import HomePage from "./src/screens/HomePage";
 
 export default function App() {
   return (
       <View style = {styles.background}>
-        <SearchScreen />
+        <HomePage/>
         <BottomBar />
       </View>
 
