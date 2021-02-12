@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Animated, Text, Alert } from 'react-native';
+import { View, Image, TouchableOpacity, Text, Alert } from 'react-native';
 
 
 export default class BottomNavigator extends Component {
-
-    toggleOpen = () => {
-
-
-    }
 
     render() {
         return (
