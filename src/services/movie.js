@@ -45,3 +45,14 @@ export function getLatest() {
         )
     ).then(result => result.json())
 }
+
+export function getGenres() {
+    return fetch(
+        getApiUrl(
+            '/genre/movie/list',
+            {
+                language: 'fr-FR',
+            }
+        )
+    ).then(result => result.json())
+}
