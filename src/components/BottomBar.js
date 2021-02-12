@@ -33,7 +33,7 @@ export default class BottomNavigator extends Component {
                   <TouchableOpacity onPress={() => { Alert.alert('go sur la page home') }}>
                         <Image
                               style={{ width: 30, height: 30 }}
-                              source={require('../../assets/images/home.svg')}
+                              source={require('../../assets/images/home.png')}
                               onPress={()=>{Alert.alert("")}}
                         >
                         </Image>
@@ -48,7 +48,7 @@ export default class BottomNavigator extends Component {
                   >
                         <Image
                               style={{  width: 30, height: 30,}}
-                              source={require('../../assets/images/loupe.svg')}
+                              source={require('../../assets/images/loupe.png')}
                               onPress={() => { Alert.alert("") }}
                         />
                   </TouchableOpacity>
