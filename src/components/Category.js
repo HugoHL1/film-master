@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
             height: 60,
             width: 150,
             backgroundColor: '#ffffff',
-            shadowOffset:{  width: 0,  height: 4,  },
+            shadowOffset:{width: 0,  height: 4},
             shadowColor: '#B00020',
             shadowOpacity: 0.7,
             justifyContent: 'center',
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
       button_text_category: {
             color: '#B00020',
             fontWeight: 'bold',
-            fontSize: 20,
+            fontSize: 16,
+            textTransform: 'uppercase',
       }
 })

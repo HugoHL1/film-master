@@ -8,7 +8,7 @@ export default class BottomNavigator extends Component {
         return (
             <View style={{
                   position: 'absolute',
-                  backgroundColor: 'white',
+                  backgroundColor: '#b00020',
                   border: 2,
                   radius: 3,
                   shadowOpacity: 0.3,
@@ -28,7 +28,7 @@ export default class BottomNavigator extends Component {
                   paddingHorizontal: 25
             }}>
                   <View style={{
-                  flexDirection: 'column', alignItems: 'center', justifyContent: 'center'
+                  flexDirection: 'column', alignItems: 'center', justifyContent: 'center' ,
                   }}>
                   <TouchableOpacity onPress={() => { Alert.alert('go sur la page home') }}>
                         <Image
@@ -38,7 +38,7 @@ export default class BottomNavigator extends Component {
                         >
                         </Image>
                   </TouchableOpacity>
-                        <Text style={{justifyContent:'center',alignItems:'center'}}>Home</Text>
+                        <Text style={{justifyContent:'center',alignItems:'center', color: '#fff'}}>Accueil</Text>
                         </View>
                         <View style={{
                         flexDirection: 'column', alignItems: 'center',justifyContent:'center',marginStart:30
@@ -47,12 +47,12 @@ export default class BottomNavigator extends Component {
                         onPress={() => { Alert.alert("go sur la page recherche") }}
                   >
                         <Image
-                              style={{  width: 30, height: 30 }}
+                              style={{  width: 30, height: 30,}}
                               source={{ uri: 'http://simpleicon.com/wp-content/uploads/active-search.png' }}
                               onPress={() => { Alert.alert("") }}
                         />
                   </TouchableOpacity>
-                  <Text style={{justifyContent:'center',alignItems:'center' }}>search </Text>
+                  <Text style={{justifyContent:'center',alignItems:'center', color: '#fff'}}>Recherche</Text>
                   </View>
             </View>
         );
