@@ -45,13 +45,15 @@ const styles = StyleSheet.create({
     status_logo: {
         width: 125,
         height: 125,
+        borderRadius: '70%',
+        borderColor: '#b00020',
+        borderWidth: 8,
     },
 
     logo_container: {
         flex:0.4,
         justifyContent: 'center',
         alignItems: 'center',
-        
     },
 
     button_container_global: {
